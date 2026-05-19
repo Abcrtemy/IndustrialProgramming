@@ -33,6 +33,7 @@ public class UploadServlet extends HttpServlet {
     @Override
     protected synchronized void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         Part part = req.getPart("file");
         String filename = extractFilename(part);
 

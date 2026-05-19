@@ -26,6 +26,7 @@ public class SearchServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        req.setCharacterEncoding("UTF-8");
         String query = req.getParameter("words");
         if (query == null || query.isBlank()) {
             resp.sendRedirect("/");
